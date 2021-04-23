@@ -1,0 +1,36 @@
+<div class="login">
+    <h2 class="login-header">Añade historial</h2>
+    <form [formGroup]="personForm" class="login-container" (ngSubmit)="post()">
+
+      <input type="nombre" placeholder="Nombre" formControlName="nombre" />
+      <ng-container
+      *ngIf="!formControls.nombre.valid &&formControls.nombre.touched">
+
+      <p *ngIf="formControls.nombre.errors.required">
+        El nombre es requerido
+      </p>
+    </ng-container>
+
+      <input type="fecha" placeholder="Fecha" formControlName="fecha" />
+  
+      <input type="dni" placeholder="DNI" formControlName="dni" />
+  
+      <input type="telefono" placeholder="Telefono" formControlName="telefono" />
+
+      <input type="fiebre" placeholder="Fiebre" formControlName="fiebre" />
+
+      <input type="tos" placeholder="Tos" formControlName="tos" />
+
+      <input type="difrespiratoria" placeholder="Difrespiratoria" formControlName="difrespiratoria" />
+
+      <input type="telefono" placeholder="Telefono" formControlName="telefono" />
+
+      <input type="malestar" placeholder="Malestar" formControlName="malestar" />
+    
+      <p>
+        <input type="submit" value="Submit" [disabled]="personForm.invalid" />
+      </p>
+    </form>
+</div>
+
+

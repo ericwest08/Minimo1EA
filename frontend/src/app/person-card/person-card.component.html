@@ -1,0 +1,19 @@
+<div class="person-card" *ngIf="person">
+
+    <div class="person">
+        <h2>NOMBRE: {{person.nombre}}</h2>
+        <p>Fecha: {{person.fecha}}</p>
+        <p>DNI: {{person.dni}}</p>
+        <p>Telefono: {{person.telefono}}</p>
+        <p>Fiebre: {{person.fiebre}}</p>
+        <p>Tos: {{person.tos}}</p>
+        <p>Dificultat respiratoria: {{person.difrespiratoria}}</p>
+        <p>Malestar general: {{person.malestar}}</p>
+    </div>
+
+    <div class="center">
+        <button (click)="deletePerson(person.nombre)" class="button"> ELIMINAR </button>
+    </div>
+
+</div>
+

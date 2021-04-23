@@ -4,8 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import bodyParser from'body-parser';
 //Importamos fichero de rutas (cambia)
-//En el app.ts importar rutas
-
+import personRoutes from './routes/person.routes'
 
 
 //Inicializamos express
@@ -24,6 +23,7 @@ app.use(bodyParser.json());
 
 //Llama a las rutas de la API (Cambia) 
 //app.use('/institution', institutionRoutes);
+app.use('/people', personRoutes);
 
 //Exportamos fichero como 'app'
 export default app;

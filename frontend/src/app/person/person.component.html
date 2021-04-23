@@ -1,0 +1,15 @@
+<div class="text">
+    <h1>HISTORIALES</h1>
+</div>
+
+<div class="center">
+<button (click)="add()" class="button" >NUEVO</button>
+</div>
+
+<div class="persons">
+  <!-- SELECTOR DE COURSE-CARD.COMPONENT.TS -->
+  <app-person-card *ngFor="let person of persons; index as i"
+    [person]="person" [index]="i">
+  </app-person-card>  
+</div>
+
